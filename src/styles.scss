@@ -54,14 +54,14 @@ $green: #2ecc71;
   padding: 0;
 }
 
-html {
+html, body {
   // Fix height issues for desktop and mobile browsers
   min-height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-body {
+body, app-root {
   flex-grow: 1;
 }
 
