@@ -1,0 +1,34 @@
+<main>
+  <article>
+    <section class="titles">
+      <h2>WEBSTAR</h2>
+      <h1>FRONTEND</h1>
+    </section>
+    <form class="login" [formGroup]="form" (ngSubmit)="login()">
+      <div class="input-container">
+        <label for="username">Felhasználónév</label>
+        <input
+          type="email"
+          id="username"
+          placeholder="mail@example.com"
+          formControlName="username"
+        />
+      </div>
+
+      <div class="input-container">
+        <label for="password">Jelszó</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="*************"
+          formControlName="password"
+        />
+      </div>
+      <button type="submit" class="login-button" [disabled]="form.invalid">
+        Belépés
+      </button>
+      <app-messages></app-messages>
+    </form>
+  </article>
+</main>
+<footer class="copyright">Webstar Csopor Kft. - © Minden jog fenntartva</footer>

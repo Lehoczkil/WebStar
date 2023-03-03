@@ -1,0 +1,123 @@
+// Reusable mixins
+
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@mixin clickable {
+  height: 3.5rem;
+  border-radius: var(--radius);
+  font-size: 16px;
+}
+
+// Set background
+
+main {
+  background: url("/assets/images/bg_1.png") no-repeat center center fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+article {
+  @include flex;
+  align-items: center;
+  color: var(--white);
+  height: 100vh;
+  padding-block: 20vh;
+}
+
+.titles {
+  @include flex;
+  height: 17vh;
+  margin-bottom: 1%;
+  text-align: center;
+
+  h1,
+  h2 {
+    letter-spacing: 5px;
+  }
+
+  h1 {
+    font-family: "Galaxy";
+    font-size: 70px;
+  }
+
+  h2 {
+    font-family: "Starjedi";
+    font-size: 30px;
+  }
+}
+
+.login {
+  @include flex;
+  height: 32vh;
+
+  label {
+    display: block;
+    font-family: "PoppinsBold";
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .input-container {
+    width: 457px; // width of the h1 title
+
+    input {
+      @include clickable;
+      border: none;
+      color: var(--dark-gray);
+      font-family: "PoppinsRegular";
+      padding: 1rem;
+      transition: all 0.1s;
+      width: 100%;
+
+      &::placeholder {
+        color: var(--dark-gray);
+        text-align: center;
+      }
+
+      &:hover,
+      &:focus {
+        border: 3px solid var(--yellow);
+        outline: none;
+      }
+    }
+  }
+
+  button {
+    @include clickable;
+    background-color: var(--yellow);
+    border: none;
+    cursor: pointer;
+    font-family: "PoppinsBold";
+    margin-inline: auto;
+    margin-top: 0.5rem;
+    transition: all 0.1s;
+    width: 60%;
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &:hover {
+      background-color: goldenrod;
+    }
+  }
+}
+
+// Footer at the bottom right corner
+
+.copyright {
+  color: var(--white);
+  font-family: "PoppinsRegular";
+  font-size: 12px;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
