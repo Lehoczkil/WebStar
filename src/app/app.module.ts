@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessagesComponent } from './components/messages/messages.component';
 import { CharacterSelectionComponent } from './components/character-selection/character-selection.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { CharacterSelectionComponent } from './components/character-selection/ch
     LoginComponent,
     MessagesComponent,
     CharacterSelectionComponent,
+    NavbarComponent,
   ],
   imports: [
     HttpClientModule,
