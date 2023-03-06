@@ -2,15 +2,18 @@ header {
   background-color: transparent;
   position: fixed;
   top: 0;
-  left: 10vw;
-  width: 80vw;
+  left: 0;
+  width: 100vw;
   text-align: center;
-  margin: auto;
+  margin-inline: auto;
   height: 10vh;
+  min-height: 90px;
   color: var(--white);
+  padding-inline: 10vw;
   padding-top: 2rem;
   font-family: 'PoppinsBold';
   font-size: 16px;
+  z-index: 10000000000;
 
   &::after {
     content: "";
@@ -40,10 +43,12 @@ header {
   }
 }
 
+.scrolling {
+  background-color: rgba(0,0,0,0.8) !important;
+}
+
 @media only screen and (max-width: 600px) {
   header {
-    min-width: 350px;
-    height: 85px;
 
     .container {
       width: 16px !important;
