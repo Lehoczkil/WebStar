@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessagesComponent } from './components/messages/messages.component';
 import { CharacterSelectionComponent } from './components/character-selection/character-selection.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MessagesComponent,
     CharacterSelectionComponent,
     NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     HttpClientModule,
