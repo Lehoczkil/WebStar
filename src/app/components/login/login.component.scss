@@ -15,7 +15,8 @@
 // Set background
 
 main {
-  background: url("/assets/images/backgrounds/bg_1.png") no-repeat center center fixed;
+  background: url("/assets/images/backgrounds/bg_1.png") no-repeat center center
+    fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -90,7 +91,7 @@ article {
     }
   }
 
-  button {
+  .login-button {
     @include clickable;
     background-color: var(--yellow);
     border: none;
@@ -107,6 +108,82 @@ article {
 
     &:hover {
       background-color: goldenrod;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  article {
+    padding-block: 10vh;
+
+    .login {
+      height: 45vh;
+      margin-bottom: 10vh;
+
+      .input-container {
+        width: 80%;
+        margin-inline: auto;
+        margin-bottom: 0;
+      }
+
+      .login-button {
+        width: 80%;
+        margin-top: 0;
+      }
+    }
+
+    .titles {
+      height: 15vh;
+
+      h1 {
+        font-size: 40px;
+        letter-spacing: 2px;
+      }
+
+      h2 {
+        font-size: 25px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 600px) {
+
+  article {
+    padding-block: 3vh;
+
+    .titles {
+      h1 {
+        font-size: 35px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+
+    .login {
+      height: 70vh;
+      margin-bottom: 0;
+
+      .input-container {
+        width: 80%; 
+        margin-inline: auto;
+  
+        input {
+          height: 2.5rem;
+          padding: 0;
+        }
+      }
+
+      .login-button {
+        height: 2.5rem;
+        width: 80%; 
+        margin-bottom: 5vh;
+        margin-top: 0;
+      }
+
     }
   }
 }
