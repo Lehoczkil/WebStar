@@ -1,1 +1,19 @@
-<p>navbar works!</p>
+<header>
+  <nav class="menu-items">
+    <section class="container">
+      <img
+        src="/assets/images/util/user.svg"
+        alt="Icon representing the pilot (user)"
+      />
+      <p>{{ username }}</p>
+    </section>
+
+    <section class="container" (click)="handleLogout()">
+      <p>Űrhajó elhagyása</p>
+      <img
+        src="/assets/images/util/logout.svg"
+        alt="Exit icon representing logout"
+      />
+    </section>
+  </nav>
+</header>
