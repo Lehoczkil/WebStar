@@ -8,6 +8,7 @@ import { BehaviorSubject, throwError } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
 import { User } from "../models/user";
 import { LoggedInUser } from "../models/logged-in-user";
+import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: "root",
@@ -25,9 +26,14 @@ export class LoginService {
     }),
   };
   private user = new BehaviorSubject<LoggedInUser | null>(null);
+  user$ = this.user.asObservable();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
+  ngOnInit(): void {
+    const storedUser = localStorage.getItem("user");
+    this.user = storedUser !== null ? JSON.parse(storedUser) : null;
+  }
 
   // Actual HTTP request
   login(username: string, password: string) {
@@ -39,7 +45,6 @@ export class LoginService {
       );
   }
 
-
   // Sets user data and store acces_token in local storage
   private handleLogin(data: User): void {
     localStorage.setItem("token", data.token);
@@ -49,9 +54,9 @@ export class LoginService {
       data.user.firstName,
       data.user.lastName
     );
+    localStorage.setItem("user", JSON.stringify(loggedInUser));
     this.user.next(loggedInUser);
   }
-
 
   // Displays the error for both the user and the developer
   private handleError(res: HttpErrorResponse) {
@@ -75,5 +80,7 @@ export class LoginService {
   logout() {
     localStorage.removeItem("token");
     localStorage.removeItem("refreshToken");
+    localStorage.removeItem("user");
+    this.router.navigate(["/login"]);
   }
 }

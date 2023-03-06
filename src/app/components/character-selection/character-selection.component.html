@@ -1,1 +1,61 @@
-<p>character-selection works!</p>
+<app-navbar></app-navbar>
+<main>
+  <section class="character-info-container">
+    <article class="row">
+      <div class="partial-container">
+        <div class="side" [class.light]="selectedCharacter.side === 'Világos'" [class.dark]="selectedCharacter.side === 'Sötét'"></div>
+        <div class="text-container">
+          <p class="top-tag">OLDAL</p>
+          <p class="top-data">{{ selectedCharacter.side }}</p>
+        </div>
+      </div>
+
+      <div class="partial-container">
+        <img class="power" src="/assets/images/util/star.svg">
+        <div class="text-container">
+          <p class="top-tag">KÜLÖNLEGES ERŐ</p>
+          <p class="top-data">{{ selectedCharacter.power }}</p>
+        </div>
+      </div>
+    </article>
+    <h1 class="name" [innerHTML]="selectedCharacter.name.toUpperCase()"></h1>
+    <p class="description">
+      {{ selectedCharacter.description }}
+    </p>
+    <h2 class="modules">MODULOK</h2>
+  </section>
+
+  <section class="character-img-container">
+    <article class="slider">
+      <div class="dot-container">
+        <div
+          class="character-dot"
+          [class.current-dot]="i === selectedCharacter.serial"
+          *ngFor="let character of characters; index as i"
+        ></div>
+      </div>
+      <div class="arrow-container">
+        <img
+          class="arrow-left"
+          src="/assets/images/util/arrow_circle.png"
+          alt="A left arrow icon"
+          (click)="handleSlideLeft()"
+        />
+        <img
+          class="arrow-right"
+          src="/assets/images/util/arrow_circle.png"
+          alt="A right arrow icon"
+          (click)="handleSlideRight()"
+        />
+      </div>
+    </article>
+    <figure>
+      <div class="circle"></div>
+      <img class="portrait"
+        [src]="selectedCharacter.imgSrc"
+        alt="Portrait of the currently selected character"
+      />
+    </figure>
+  </section>
+</main>
+<app-footer></app-footer>
