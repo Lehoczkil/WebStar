@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, HostListener } from "@angular/core";
 import { LoginService } from "src/app/services/login.service";
 
 @Component({
@@ -21,6 +21,16 @@ export class NavbarComponent {
   // Logout the user, the service redirects to the login page
   handleLogout() {
     this.loginService.logout();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    let element = document.querySelector('.header') as HTMLElement;
+    if (window.pageYOffset > element.clientHeight) {
+      element.classList.add('scrolling');
+    } else {
+      element.classList.remove('scrolling');
+    }
   }
 
 }
