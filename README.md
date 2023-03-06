@@ -1,27 +1,76 @@
 # WebStar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+This Star Wars-themed project was created within one week.
+This is my first project with these technologies, so I spent my first two days learning about Angular, TypeScript, and CSS preprocessors,
+especially SASS/SCSS. All of this is still new to me, and I had some problems with my notebook during the project, so I had a few hard days,
+but in the last two days, my computer worked just fine, and I managed to do this much.
 
-## Development server
+## Setup / Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. If you do not have npm installed, then run the following command:
 
-## Code scaffolding
+```bash
+npm install -g npm
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Run the follwoing to get the dependencies:
+
+```bash
+npm install
+```
+
+3. Check your node version using the following command:
+
+```bash
+nvm version
+```
+
+4. If you are using the newest or a really old version, then I recommend using the following:
+
+```bash
+npm use 16.13.0
+```
+
+## Usage
+
+To run the project in developer mode, use the following command in the directory of the project:
+
+```bash
+ng serve
+```
+
+Now, you can see the application on http://localhost:4200/
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To run the project in productioon mode, you need to build first:
 
-## Running unit tests
+```bash
+ng build --watch
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+In another terminal, you can use a webserver:
 
-## Running end-to-end tests
+```bash
+lite-server --baseDir="dist/WebStar"
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Features:
 
-## Further help
+- Login page with JWT authentication, auth-guard, and logout
+- Character-selection page with slider
+- Responsive desing ( The character-selection could be more responsive, I only tested on few devices: )
+  - Tested on:
+    - iPhone SE
+    - iPhone XR
+    - iPhone 12 Pro
+    - Pixel 5
+    - Samsung Galaxy S8+
+    - Samsung Galaxy S20 Ultra
+   
+## Technologies:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Angular 14
+- TypeScript
+- SCSS
+- HTML
