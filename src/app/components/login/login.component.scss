@@ -15,7 +15,7 @@
 // Set background
 
 main {
-  background: url("/assets/images/bg_1.png") no-repeat center center fixed;
+  background: url("/assets/images/backgrounds/bg_1.png") no-repeat center center fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -109,15 +109,4 @@ article {
       background-color: goldenrod;
     }
   }
-}
-
-// Footer at the bottom right corner
-
-.copyright {
-  color: var(--white);
-  font-family: "PoppinsRegular";
-  font-size: 12px;
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
 }
