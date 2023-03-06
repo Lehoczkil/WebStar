@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: "Starjedi";
-  src: url("/assets/fonts/Starjedi.ttf");
+  src: url("/assets/fonts/Starjedi.ttf") format('truetype');
 }
 
 // Global variables for colors:
@@ -69,6 +69,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body,
