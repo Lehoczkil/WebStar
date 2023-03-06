@@ -28,6 +28,12 @@ export class LoginComponent {
     private messageService: MessageService
   ) {}
 
+  ngOnInit(): void {
+    if (localStorage.getItem("user")) {
+      this.router.navigate(["/character-selection"]);
+    }
+  }
+
   login() {
     this.loginService
       .login(this.form.value.username!, this.form.value.password!)
