@@ -45,7 +45,7 @@ nvm version
 4. If you are using the newest or a really old version, then I recommend using the following:
 
 ```bash
-npm use 16.13.0
+nvm use 16.13.0
 ```
 
 ## Usage
