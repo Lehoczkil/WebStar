@@ -57,7 +57,7 @@
     </section>
 
     <section class="character-img-container">
-      <figure>
+      <figure (touchstart)="swipe($event, 'start')" (touchend)="swipe($event, 'end')">
         <div class="circle"></div>
         <img [src]="selectedCharacter.imgSrc" alt="Portrait of the currently selected character" class="portrait">
       </figure>
