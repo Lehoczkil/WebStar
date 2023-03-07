@@ -76,7 +76,7 @@ lite-server --baseDir="dist/WebStar"
 
 - Login page with JWT authentication, auth-guard, and logout
 - Character-selection page with slider
-- Responsive desing ( The character-selection could be more responsive, I only tested on few devices: )
+- Responsive design ( The character-selection could be more responsive, I only tested on few devices: )
   - Tested on:
     - iPhone SE
     - iPhone XR
@@ -84,6 +84,7 @@ lite-server --baseDir="dist/WebStar"
     - Pixel 5
     - Samsung Galaxy S8+
     - Samsung Galaxy S20 Ultra
+- Change character with swiping on mobile devices
    
 ## Technologies:
 
