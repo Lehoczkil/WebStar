@@ -5,6 +5,23 @@ This is my first project with these technologies, so I spent my first two days l
 especially SASS/SCSS. All of this is still new to me, and I had some problems with my notebook during the project, so I had a few hard days,
 but in the last two days, my computer worked just fine, and I managed to do this much.
 
+## Design
+
+### Mobile Vertical
+![Alt text](./design/login-mobile-vertical.png )
+
+![Alt text](./design/cs-mobile-vertical.png )
+
+### Mobile Horizontal
+![Alt text](./design/login-mobile-horizontal.png )
+
+![Alt text](./design/cs-mobile-horizontal.png )
+
+### Desktop
+![Alt text](./design/login-desktop.png )
+
+![Alt text](./design/cs-desktop.png )
+
 ## Setup / Installation
 
 1. If you do not have npm installed, then run the following command:
